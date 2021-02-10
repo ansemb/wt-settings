@@ -43,9 +43,9 @@
                 "guid" : "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "source": "Windows.Terminal.Wsl",
                 "commandline" : "wsl.exe -d Ubuntu",
+                "startingDirectory" : ".",
                 "icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
                 "hidden": false,
-                "startingDirectory" : ".",
                 "useAcrylic" : true,
                 "acrylicOpacity" : 0.75,
                 "closeOnExit" : true,
@@ -61,6 +61,7 @@
                 "name": "Windows PowerShell",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "commandline": "powershell.exe",
+                "startingDirectory" : ".",
                 "useAcrylic" : true,
                 "acrylicOpacity" : 0.75,
                 "closeOnExit" : true,
@@ -75,6 +76,7 @@
                 "name": "Command Prompt",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "commandline": "cmd.exe",
+                "startingDirectory" : ".",
                 "hidden": false
             },
             {
