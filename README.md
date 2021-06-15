@@ -5,3 +5,5 @@ windows terminal settings
 ```
 git clone <repo> .
 ```
+## font
+download font at [NerdFont](https://www.nerdfonts.com/font-downloads)
