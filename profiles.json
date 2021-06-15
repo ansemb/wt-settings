@@ -45,7 +45,7 @@
             {
                 "acrylicOpacity": 0.75,
                 "closeOnExit": "graceful",
-                "colorScheme": "cyberpunk",
+                "colorScheme": "nord",
                 "commandline": "wsl.exe -d Ubuntu",
                 "cursorShape": "bar",
                 "fontFace": "DejaVuSansMono Nerd Font",
@@ -59,12 +59,12 @@
                 "snapOnInput": true,
                 "source": "Windows.Terminal.Wsl",
                 "startingDirectory": ".",
-                "useAcrylic": true
+                "useAcrylic": false
             },
             {
                 "acrylicOpacity": 0.75,
                 "closeOnExit": "graceful",
-                "colorScheme": "cyberpunk",
+                "colorScheme": "nord",
                 "commandline": "powershell.exe",
                 "cursorShape": "bar",
                 "fontFace": "DejaVuSansMono Nerd Font",
@@ -86,7 +86,7 @@
             {
                 "acrylicOpacity": 0.75,
                 "closeOnExit": "graceful",
-                "colorScheme": "cyberpunk",
+                "colorScheme": "nord",
                 "cursorShape": "bar",
                 "fontFace": "DejaVuSansMono Nerd Font",
                 "fontSize": 11,
@@ -310,6 +310,7 @@
             "yellow": "#808000"
         },
         {
+            "name": "cyberpunk",
             "background": "#171717",
             "black": "#000000",
             "blue": "#00BFFF",
@@ -325,12 +326,32 @@
             "cyan": "#86CBFE",
             "foreground": "#E5E5E5",
             "green": "#00FBAC",
-            "name": "cyberpunk",
             "purple": "#DF95FF",
             "red": "#FF7092",
             "selectionBackground": "#FFFFFF",
             "white": "#FFFFFF",
             "yellow": "#FFFA6A"
+        },
+        {
+            "name": "nord",
+            "foreground": "#D8DEE9",
+            "background": "#2E3440",
+            "black": "#3B4252",
+            "red": "#BF616A",
+            "green": "#A3BE8C",
+            "yellow": "#EBCB8B",
+            "blue": "#81A1C1",
+            "purple": "#B48EAD",
+            "cyan": "#88C0D0",
+            "white": "#E5E9F0",
+            "brightBlack": "#4C566A",
+            "brightRed": "#BF616A",
+            "brightGreen": "#A3BE8C",
+            "brightYellow": "#EBCB8B",
+            "brightBlue": "#81A1C1",
+            "brightPurple": "#B48EAD",
+            "brightCyan": "#88C0D0",
+            "brightWhite": "#E5E9F0"
         }
     ],
     "showTabsInTitlebar": true,
