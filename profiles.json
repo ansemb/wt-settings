@@ -59,29 +59,33 @@
                 "snapOnInput": true,
                 "source": "Windows.Terminal.Wsl",
                 "startingDirectory": ".",
-                "useAcrylic": false
+                "useAcrylic": false,
+                "bellStyle": "none"
             },
             {
                 "acrylicOpacity": 0.75,
                 "closeOnExit": "graceful",
                 "colorScheme": "nord",
-                "commandline": "powershell.exe",
+                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -WorkingDirectory ~",
                 "cursorShape": "bar",
                 "fontFace": "DejaVuSansMono Nerd Font",
                 "fontSize": 11,
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "historySize": 9000,
+                "icon": "C:\\Program Files\\PowerShell\\7\\assets\\Powershell_black.ico",
                 "name": "Windows PowerShell",
                 "snapOnInput": true,
                 "startingDirectory": ".",
-                "useAcrylic": true
+                "useAcrylic": true,
+                "bellStyle": "none"
             },
             {
                 "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt",
-                "startingDirectory": "."
+                "startingDirectory": ".",
+                "bellStyle": "none"
             },
             {
                 "acrylicOpacity": 0.75,
@@ -96,7 +100,15 @@
                 "name": "Azure Cloud Shell",
                 "snapOnInput": true,
                 "source": "Windows.Terminal.Azure",
-                "useAcrylic": true
+                "useAcrylic": true,
+                "bellStyle": "none"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore",
+                "bellStyle": "none"
             }
         ]
     },
