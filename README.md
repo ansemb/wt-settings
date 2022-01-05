@@ -33,8 +33,10 @@ Invoke-WebRequest https://raw.githubusercontent.com/ansemb/wt-settings/master/pr
 
 ```
 cd ~
-git clone --bare https://github.com/ansemb/wt-settings.git
-rm ~/README.md ~/profiles.json 
+git clone --bare https://github.com/ansemb/wt-settings.git ~/.dotfiles
+rm $HOME/README.md
+rm $HOME/profiles.json 
+git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" update-index --assume-unchanged README.md profiles.json
 ```
 
 ## install font
