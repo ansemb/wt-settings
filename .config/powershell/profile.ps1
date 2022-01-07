@@ -19,7 +19,7 @@ Set-PSReadLineOption -Colors @{ InlinePrediction = '#6b7a9b'}
 Invoke-Expression (&starship init powershell)
 
 
-# keybindings
+# keybindings and aliases
 Set-PSReadlineKeyHandler -Key "ctrl+a" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::BeginningOfLine() }
 Set-PSReadlineKeyHandler -Key "ctrl+e" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine() }
 Set-PSReadlineKeyHandler -Key "ctrl+b" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::BackwardChar() }
@@ -42,8 +42,12 @@ Set-PSReadlineKeyHandler -Key "ctrl+_" -ScriptBlock { [Microsoft.PowerShell.PSCo
 Set-PSReadlineKeyHandler -Key "ctrl+u" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::BackwardKillLine() }
 Set-PSReadlineKeyHandler -Key "ctrl+n" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchForward() }
 Set-PSReadlineKeyHandler -Key "ctrl+p" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchBackward() }
-
 Set-PSReadlineKeyHandler -Key "alt+backspace" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::BackwardKillWord() }
+
+Set-Alias lvim "C:\Users\adrian\.local\bin\lvim.ps1"
+Set-Alias vim "C:\Users\adrian\.local\bin\lvim.ps1"
+
+
 
 # custom functions
 
