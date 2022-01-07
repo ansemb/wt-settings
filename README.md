@@ -11,13 +11,14 @@ windows terminal and powershell settings
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-#### (1.2) install packages:
+#### (1.2) install packages/modules:
 ```
 choco install microsoft-windows-terminal -y
 choco install powershell-core -y
 choco install neovim --pre -y
 choco install nodejs-lts -y
 choco install rust -y
+Install-Module z -AllowClobber -Force
 ```
 #### if python is not installed:
 ```
