@@ -38,7 +38,10 @@ rm $HOME/profiles.json
 git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" update-index --assume-unchanged README.md profiles.json
 ```
 #### (3.2) open *admin* powershell and create symlink (windows)
+```
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell\profile.ps1" -Target "$HOME\.config\powershell\profile.ps1"
+```
+
 
 ## install font
 download font at [NerdFont](https://www.nerdfonts.com/font-downloads)
