@@ -14,6 +14,9 @@ Set-PSReadLineOption -PredictionSource History
 # Set the color for Prediction (auto-suggestion)
 Set-PSReadLineOption -Colors @{ InlinePrediction = '#6b7a9b'}
 
+# modules
+Import-Module z
+
 
 # starship
 Invoke-Expression (&starship init powershell)
