@@ -28,9 +28,8 @@ exit
 Invoke-WebRequest https://raw.githubusercontent.com/ansemb/wt-settings/master/profiles.json -OutFile "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 ```
 
-### (3) clone repo
-#### 
-
+### (3) repo
+#### (3.1) clone repo
 ```
 cd ~
 git clone --bare https://github.com/ansemb/wt-settings.git ~/.dotfiles
@@ -38,6 +37,8 @@ rm $HOME/README.md
 rm $HOME/profiles.json 
 git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" update-index --assume-unchanged README.md profiles.json
 ```
+#### (3.2) open *admin* powershell and create symlink (windows)
+New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell\profile.ps1" -Target "$HOME\.config\powershell\profile.ps1"
 
 ## install font
 download font at [NerdFont](https://www.nerdfonts.com/font-downloads)
