@@ -43,6 +43,7 @@ git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" update-index --assume-unchan
 ```
 #### (2.3) create symlink
 ```
+New-Item $HOME\Documents\PowerShell -ItemType Directory -ea 0
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell\profile.ps1" -Target "$HOME\.config\powershell\profile.ps1"
 exit
 ```
