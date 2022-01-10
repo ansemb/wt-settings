@@ -18,6 +18,7 @@ choco install powershell-core -y
 choco install neovim --pre -y
 choco install nodejs-lts -y
 choco install rust -y
+choco install starship -y
 Install-Module z -AllowClobber -Force
 ```
 #### if python is not installed:
