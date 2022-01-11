@@ -11,13 +11,15 @@ windows terminal and powershell settings
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-#### (1.2) install packages:
+#### (1.2) install packages/modules:
 ```
 choco install microsoft-windows-terminal -y
 choco install powershell-core -y
 choco install neovim --pre -y
 choco install nodejs-lts -y
 choco install rust -y
+choco install starship -y
+Install-Module z -AllowClobber -Force
 ```
 #### if python is not installed:
 ```
@@ -34,13 +36,15 @@ Invoke-WebRequest https://raw.githubusercontent.com/ansemb/wt-settings/master/pr
 #### (2.2) clone repo
 ```
 cd ~
-git clone --bare https://github.com/ansemb/wt-settings.git ~/.dotfiles
+git clone --bare https://github.com/ansemb/wt-settings.git $HOME/.dotfiles
+git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" checkout
 rm $HOME/README.md
 rm $HOME/profiles.json 
 git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" update-index --assume-unchanged README.md profiles.json
 ```
 #### (2.3) create symlink
 ```
+New-Item $HOME\Documents\PowerShell -ItemType Directory -ea 0
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell\profile.ps1" -Target "$HOME\.config\powershell\profile.ps1"
 exit
 ```
