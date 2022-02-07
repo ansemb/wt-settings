@@ -37,10 +37,12 @@ Invoke-WebRequest https://raw.githubusercontent.com/ansemb/wt-settings/master/pr
 ```
 cd ~
 git clone --bare https://github.com/ansemb/wt-settings.git $HOME/.dotfiles
-git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" checkout
+function dotfiles { git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" @Args }
+dotfiles checkout
+dotfiles status.showUntrackedFiles no
 rm $HOME/README.md
 rm $HOME/profiles.json 
-git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" update-index --assume-unchanged README.md profiles.json
+dotfiles update-index --assume-unchanged README.md profiles.json
 ```
 #### (2.3) create symlink
 ```
@@ -57,4 +59,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 
 ## install font
-download font at [NerdFont](https://www.nerdfonts.com/font-downloads)
+download font at [NerdFont](https://www.nerdfonts.com/font-downloads):
+- [DejaVuSansMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip)
+- [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip)
