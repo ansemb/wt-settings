@@ -60,12 +60,18 @@ Function rm {
     [Parameter(Mandatory=$false, Position=0, ValueFromRemainingArguments=$true,
                 HelpMessage="Specifies a path of the items being removed. Wildcard characters are permitted.")] 
     [string[]]$paths,
+    [Alias("f")]
     [Parameter(Mandatory=$false,
                 HelpMessage="ignore nonexistent files and arguments, never prompt")] 
-    [switch]$f,
+    [switch]$force,
+    [Alias("r")]
     [Parameter(Mandatory=$false,
                 HelpMessage="remove directories and their contents recursively")]
-    [switch]$r
+    [switch]$recursive,
+    [Alias("fr")]
+    [Parameter(Mandatory=$false,
+                HelpMessage="combines r and f")]
+    [switch]$rf
   )
 
   # if user does not specify path print error msg.
@@ -76,11 +82,20 @@ Function rm {
   }
 
   $cmdPrev = "Remove-Item -Force"
-  If ($f -eq $true){
-    $cmdPrev = "$cmdPrev -ErrorAction SilentlyContinue"
+
+  $f_args = "-ErrorAction SilentlyContinue"
+  $r_args = "-Recurse"
+
+  If ($rf){
+    $force = $true
+    $recursive = $true
   }
-  If ($r -eq $true){
-    $cmdPrev = "$cmdPrev -Recurse"
+
+  If ($force){
+    $cmdPrev = "$cmdPrev $f_args"
+  }
+  If ($recursive){
+    $cmdPrev = "$cmdPrev $r_args"
   }
 
   foreach ($p in $paths) {
