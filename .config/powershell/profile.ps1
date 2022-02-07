@@ -50,6 +50,44 @@ Set-PSReadlineKeyHandler -Key "alt+backspace" -ScriptBlock { [Microsoft.PowerShe
 Set-Alias lvim "C:\Users\adrian\.local\bin\lvim.ps1"
 Set-Alias vim "C:\Users\adrian\.local\bin\lvim.ps1"
 
+# remvoe rm alias
+Remove-Alias -Name rm
+
+# rm -rf -> rm -r -f 
+Function rm {
+  [CmdletBinding()]
+  param (
+    [Parameter(Mandatory=$false, Position=0, ValueFromRemainingArguments=$true,
+                HelpMessage="Specifies a path of the items being removed. Wildcard characters are permitted.")] 
+    [string[]]$paths,
+    [Parameter(Mandatory=$false,
+                HelpMessage="ignore nonexistent files and arguments, never prompt")] 
+    [switch]$f,
+    [Parameter(Mandatory=$false,
+                HelpMessage="remove directories and their contents recursively")]
+    [switch]$r
+  )
+
+  # if user does not specify path print error msg.
+  # not interested in mandatory
+  If ($paths -eq $null){
+    Write-Host "rm: missing operand (path)"
+    return
+  }
+
+  $cmdPrev = "Remove-Item -Force"
+  If ($f -eq $true){
+    $cmdPrev = "$cmdPrev -ErrorAction SilentlyContinue"
+  }
+  If ($r -eq $true){
+    $cmdPrev = "$cmdPrev -Recurse"
+  }
+
+  foreach ($p in $paths) {
+    $commandExec = "$cmdPrev -Path $p" 
+    Invoke-Expression "$commandExec"
+  }
+}
 
 
 # custom functions
