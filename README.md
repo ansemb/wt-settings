@@ -35,11 +35,12 @@ Invoke-WebRequest https://raw.githubusercontent.com/ansemb/wt-settings/master/pr
 
 #### (2.2) clone repo
 ```
-cd ~
+cd $HOME
+Remove-Item -Force -Recurse -ErrorAction SilentlyContinue $HOME/.dotfiles
 git clone --bare https://github.com/ansemb/wt-settings.git $HOME/.dotfiles
 function dotfiles { git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" @Args }
-dotfiles checkout
-dotfiles status.showUntrackedFiles no
+dotfiles checkout --force
+dotfiles config status.showUntrackedFiles no
 rm $HOME/README.md
 rm $HOME/profiles.json 
 dotfiles update-index --assume-unchanged README.md profiles.json
@@ -47,6 +48,7 @@ dotfiles update-index --assume-unchanged README.md profiles.json
 #### (2.3) create symlink
 ```
 New-Item $HOME\Documents\PowerShell -ItemType Directory -ea 0
+Remove-Item -Force -Recurse -ErrorAction SilentlyContinue $HOME\Documents\PowerShell\profile.ps1
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell\profile.ps1" -Target "$HOME\.config\powershell\profile.ps1"
 exit
 ```
