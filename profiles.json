@@ -62,7 +62,7 @@
                 "acrylicOpacity": 0.85,
                 "closeOnExit": "graceful",
                 "colorScheme": "nord-pwsh",
-                "commandline": "pwsh -WorkingDirectory ~",
+                "commandline": "pwsh",
                 "cursorShape": "bar",
                 "fontFace": "DejaVuSansMono Nerd Font",
                 "fontSize": 11,
