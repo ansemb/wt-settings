@@ -39,7 +39,7 @@
         "defaults": {},
         "list": [
             {
-                "acrylicOpacity": 0.85,
+                "acrylicOpacity": 0.95,
                 "closeOnExit": "graceful",
                 "colorScheme": "nord",
                 "commandline": "wsl.exe -d Ubuntu",
@@ -59,7 +59,7 @@
                 "bellStyle": "none"
             },
             {
-                "acrylicOpacity": 0.85,
+                "acrylicOpacity": 0.95,
                 "closeOnExit": "graceful",
                 "colorScheme": "nord-pwsh",
                 "commandline": "pwsh",
@@ -85,7 +85,7 @@
                 "bellStyle": "none"
             },
             {
-                "acrylicOpacity": 0.75,
+                "acrylicOpacity": 0.95,
                 "closeOnExit": "graceful",
                 "colorScheme": "nord",
                 "cursorShape": "bar",
