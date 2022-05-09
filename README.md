@@ -13,9 +13,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 #### (1.2) install packages/modules:
 ```
+winget install Neovim.Neovim
 choco install microsoft-windows-terminal -y
 choco install powershell-core -y
-choco install neovim --pre -y
 choco install nodejs-lts -y
 choco install rust -y
 choco install starship -y
