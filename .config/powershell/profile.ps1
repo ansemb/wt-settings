@@ -108,3 +108,4 @@ Function rm {
 # custom functions
 
 function dotfiles { git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" @Args }
+function ll { Get-ChildItem -Force @Args }
