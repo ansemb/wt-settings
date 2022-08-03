@@ -17,7 +17,7 @@ winget install Neovim.Neovim --location C:\tools\neovim # or winget install Neov
 winget install --id Microsoft.Powershell --source winget
 choco install nodejs-lts -y
 choco install rust -y
-choco install starship -y
+winget install --id Starship.Starship
 Install-Module z -AllowClobber -Force
 ```
 #### if python is not installed:
