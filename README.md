@@ -15,7 +15,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 winget install Neovim.Neovim --location C:\tools\neovim # or winget install Neovim.Neovim -i and set installation directory C:\tools\neovim
 winget install --id Microsoft.Powershell --source winget
-choco install powershell-core -y
 choco install nodejs-lts -y
 choco install rust -y
 choco install starship -y
