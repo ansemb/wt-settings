@@ -18,7 +18,7 @@ winget install --id Microsoft.Powershell --source winget
 winget install --id Git.Git -e --source winget
 winget install --id Starship.Starship --source winget
 choco install nodejs-lts -y
-choco install rust -y
+winget install --id Rustlang.Rustup --source winget
 Install-Module z -AllowClobber -Force
 ```
 #### if python is not installed:
