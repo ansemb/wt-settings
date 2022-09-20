@@ -21,6 +21,15 @@ winget install --id 7zip.7zip --source winget
 winget install --id Microsoft.VisualStudioCode --source winget
 ```
 
+#### [wsl](https://learn.microsoft.com/en-us/windows/wsl/install), run powershell as admin:
+```
+wsl --install
+```
+reboot system, and run:
+```
+wsl --install -d Ubuntu
+```
+
 ### (2) repo
 
 #### (2.1) get profile for windows terminal:
