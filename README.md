@@ -25,11 +25,9 @@ winget install --id Microsoft.VisualStudioCode --source winget
 #### [wsl](https://learn.microsoft.com/en-us/windows/wsl/install), run powershell as admin:
 ```
 wsl --install
-```
-reboot system, and run:
-```
 wsl --install -d Ubuntu
 ```
+reboot system.
 
 ### (2) repo
 
