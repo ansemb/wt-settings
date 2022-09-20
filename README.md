@@ -14,9 +14,11 @@ winget install --id Starship.Starship --source winget
 winget install --id CoreyButler.NVMforWindows --source winget
 Install-Module z -AllowClobber -Force
 ```
-#### if python is not installed:
+#### other:
 ```
 winget install --id Python.Python.3.10 --source winget
+winget install --id 7zip.7zip --source winget
+winget install --id Microsoft.VisualStudioCode --source winget
 ```
 
 ### (2) repo
