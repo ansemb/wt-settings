@@ -16,6 +16,7 @@ Install-Module z -AllowClobber -Force
 ```
 #### other:
 ```
+winget install --id Microsoft.PowerToys --source winget
 winget install --id Python.Python.3.10 --source winget
 winget install --id 7zip.7zip --source winget
 winget install --id Microsoft.VisualStudioCode --source winget
