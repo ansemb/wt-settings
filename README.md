@@ -3,28 +3,32 @@ windows terminal and powershell settings
 
 ### (1) installation
 
-#### (1.1) open *admin* powershell (**win+x** **a**)
-
-#### (1.2) install package manager [chocolatey](https://chocolatey.org/install):
-
+#### (1.1) install packages/modules:
 ```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
-
-#### (1.2) install packages/modules:
-```
-winget install Neovim.Neovim --location C:\tools\neovim # or winget install Neovim.Neovim -i and set installation directory C:\tools\neovim
 winget install --id Microsoft.Powershell --source winget
+winget install Neovim.Neovim -i # and set installation directory C:\tools\neovim # winget install Neovim.Neovim --location C:\tools\neovim 
+winget install --id gerardog.gsudo --source winget
 winget install --id Git.Git -e --source winget
-winget install --id Starship.Starship --source winget
-choco install nodejs-lts -y
 winget install --id Rustlang.Rustup --source winget
+winget install --id Starship.Starship --source winget
+winget install --id CoreyButler.NVMforWindows --source winget
 Install-Module z -AllowClobber -Force
 ```
-#### if python is not installed:
+#### other:
 ```
-choco install python3 -y
+winget install --id Microsoft.PowerToys --source winget
+winget install --id Python.Python.3.10 --source winget
+winget install --id 7zip.7zip --source winget
+winget install --id KeePassXCTeam.KeePassXC --source winget
+winget install --id Microsoft.VisualStudioCode --source winget
 ```
+
+#### [wsl](https://learn.microsoft.com/en-us/windows/wsl/install), run powershell as admin:
+```
+wsl --install
+wsl --install -d Ubuntu
+```
+reboot system.
 
 ### (2) repo
 
