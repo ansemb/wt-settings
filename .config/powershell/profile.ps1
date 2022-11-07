@@ -1,5 +1,8 @@
 # Powershell
 
+# VARIABLES
+$PWSH_DIR = "$HOME/.config/powershell"
+
 # Shows navigable menu of all options when hitting Tab
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
@@ -14,8 +17,8 @@ Set-PSReadLineOption -PredictionSource History
 # Set the color for Prediction (auto-suggestion)
 Set-PSReadLineOption -Colors @{ InlinePrediction = '#6b7a9b'}
 
-# modules
-Import-Module z
+# PATH
+$Env:Path = "$HOME\.local\bin;$Env:Path"
 
 
 # starship
@@ -47,8 +50,9 @@ Set-PSReadlineKeyHandler -Key "ctrl+n" -ScriptBlock { [Microsoft.PowerShell.PSCo
 Set-PSReadlineKeyHandler -Key "ctrl+p" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchBackward() }
 Set-PSReadlineKeyHandler -Key "alt+backspace" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::BackwardKillWord() }
 
-Set-Alias lvim "C:\Users\adrian\.local\bin\lvim.ps1"
-Set-Alias vim "C:\Users\adrian\.local\bin\lvim.ps1"
+Set-Alias lvim "$HOME\.local\bin\lvim.ps1"
+Set-Alias vim "$HOME\.local\bin\lvim.ps1"
+Set-Alias z zoxide
 
 # remvoe rm alias
 Remove-Alias -Name rm
@@ -109,3 +113,7 @@ Function rm {
 
 function dotfiles { git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" @Args }
 function ll { Get-ChildItem -Force @Args }
+
+# source zoxide
+. "$PWSH_DIR/zoxide.ps1"
+
