@@ -48,6 +48,8 @@ dotfiles config status.showUntrackedFiles no
 rm $HOME/README.md
 rm $HOME/profiles.json 
 dotfiles update-index --assume-unchanged README.md profiles.json
+dotfiles submodule update --init --recursive
+dotfiles pull --recurse-submodules --jobs=10
 ```
 #### (2.3) create symlink
 ```
