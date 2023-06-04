@@ -26,4 +26,6 @@ python_binary = "python3"
 #symbol = "👾 "
 #pyenv_version_name = true
 
-
+[shell]
+disabled = false
+powershell_indicator = 'psh'
