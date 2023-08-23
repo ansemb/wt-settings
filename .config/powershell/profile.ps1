@@ -50,6 +50,9 @@ Set-PSReadlineKeyHandler -Key "ctrl+n" -ScriptBlock { [Microsoft.PowerShell.PSCo
 Set-PSReadlineKeyHandler -Key "ctrl+p" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchBackward() }
 Set-PSReadlineKeyHandler -Key "alt+backspace" -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::BackwardKillWord() }
 
+# bind ctrl+h to nothing, as it seems not possible to unbind it
+Set-PSReadlineKeyHandler -Key "ctrl+h" -ScriptBlock {}
+
 Set-Alias lvim "$HOME\.local\bin\lvim.ps1"
 Set-Alias vim "$HOME\.local\bin\lvim.ps1"
 Set-Alias z zoxide
