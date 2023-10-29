@@ -6,22 +6,23 @@ windows terminal and powershell settings
 #### (1.1) install packages/modules:
 ```
 winget install --id Microsoft.Powershell --source winget
-winget install Neovim.Neovim -i # and set installation directory C:\tools\neovim # winget install Neovim.Neovim --location C:\tools\neovim 
 winget install --id gerardog.gsudo --source winget
 winget install --id Git.Git -e --source winget
 winget install --id Rustlang.Rustup --source winget
 winget install --id Starship.Starship --source winget
 winget install --id CoreyButler.NVMforWindows --source winget
-Install-Module z -AllowClobber -Force
+winget install ajeetdsouza.zoxide
 ```
 #### other:
 ```
+winget install --id KeePassXCTeam.KeePassXC --source winget
 winget install --id Microsoft.PowerToys --source winget
 winget install --id Python.Python.3.10 --source winget
 winget install --id 7zip.7zip --source winget
-winget install --id KeePassXCTeam.KeePassXC --source winget
 winget install --id Microsoft.VisualStudioCode --source winget
 ```
+
+[alacritty](https://alacritty.org/)
 
 #### [wsl](https://learn.microsoft.com/en-us/windows/wsl/install), run powershell as admin:
 ```
