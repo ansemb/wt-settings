@@ -22,7 +22,8 @@ winget install --id 7zip.7zip --source winget
 winget install --id Microsoft.VisualStudioCode --source winget
 ```
 
-[alacritty](https://alacritty.org/)
+- [alacritty](https://alacritty.org/)
+- [helix](https://docs.helix-editor.com/)
 
 #### [wsl](https://learn.microsoft.com/en-us/windows/wsl/install), run powershell as admin:
 ```
@@ -58,13 +59,6 @@ New-Item $HOME\Documents\PowerShell -ItemType Directory -ea 0
 Remove-Item -Force -Recurse -ErrorAction SilentlyContinue $HOME\Documents\PowerShell\profile.ps1
 New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell\profile.ps1" -Target "$HOME\.config\powershell\profile.ps1"
 exit
-```
-
-### (3) [lunarvim](https://www.lunarvim.org)
-#### (3.1) open powershell core
-#### (3.2) install lunarvim:
-```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install.ps1'))
 ```
 
 ## install font
