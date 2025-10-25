@@ -117,6 +117,10 @@ Function rm {
 function dotfiles { git --git-dir="$HOME\.dotfiles" --work-tree="$HOME" @Args }
 function ll { Get-ChildItem -Force @Args }
 
+# fnm - https://github.com/Schniz/fnm
+fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
+
 # source zoxide
 . "$PWSH_DIR/zoxide.ps1"
+
 
