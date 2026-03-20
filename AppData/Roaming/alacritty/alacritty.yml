@@ -8,7 +8,8 @@ font:
 key_bindings:
   - { key: Space, mods: Control, chars: "\x00" } # Ctrl + Space
 
-# shell:
-#   program: ubuntu
-#   args:
-#     - ~
+shell:
+  program: wsl.exe
+  args:
+    - -d
+    - Ubuntu
