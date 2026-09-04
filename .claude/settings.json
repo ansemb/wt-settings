@@ -3,11 +3,14 @@
     "type": "command",
     "command": "pwsh -NoProfile -File ~/.claude/statusline.ps1"
   },
+  "model": "claude-fable-5-1[1m]",
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
-  "forceLoginMethod": "console",
-  "effortLevel": "medium",
-  "skipDangerousModePermissionPrompt": true
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": true
 }

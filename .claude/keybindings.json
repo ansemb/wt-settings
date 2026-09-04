@@ -1,10 +1,11 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "$docs": "https://code.claude.com/docs/en/keybindings",
   "bindings": [
     {
       "context": "Chat",
       "bindings": {
-        "tab tab": "chat:cycleMode"
+        "shift+enter": "chat:newline"
       }
     }
   ]
